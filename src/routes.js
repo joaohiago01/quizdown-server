@@ -4,6 +4,9 @@ const routes = express.Router();
 
 const QuestionController = require('./controllers/QuestionController');
 const QuizController = require('./controllers/QuizController');
+const UserController = require('./controllers/UserController');
+
+routes.get("/users", UserController.index);
 
 routes.get("/questions", QuestionController.index);
 routes.get("/questions/:quizId", QuestionController.show);
