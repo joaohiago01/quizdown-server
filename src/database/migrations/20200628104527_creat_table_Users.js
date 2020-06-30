@@ -10,6 +10,4 @@ exports.up = function(knex) {
   
 };
 
-exports.down = knex => knex.schema.droptable('users')
-  
-
+exports.down = knex => knex.schema.droptable('users');
