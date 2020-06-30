@@ -4,7 +4,20 @@ module.exports = {
 
     async index(request, response) {
         const quizzes = await knex('quizzes');
-        return response.json(quizzes);
+  //      return response.json(quizzes);
+
+        const serializedQuizzes = quizzes.map(quiz => {
+            return {
+                id: quiz.id,
+                name: quiz.name,
+                image_url: `http://localhost:3333/uploads/${quiz.image}`,
+                description: quiz.description,
+                pointValue: quiz.pointValue,
+            };
+        });
+
+        return response.json(serializedQuizzes);  
+
     },
 
     async create(request, response) {
