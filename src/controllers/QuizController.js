@@ -1,4 +1,5 @@
 const knex = require('../database/connection');
+const { show } = require('./QuestionController');
 
 module.exports = {
 
@@ -15,6 +16,23 @@ module.exports = {
         });
 
         return response.json(serializedQuizzes);
+
+    },
+
+    async show(request, response) {
+        const { id } = request.params;
+        const quiz = await knex('quizzes').where('id', id);
+        const serializedQuiz = quiz.map(quiz => {
+            return {
+                id: quiz.id,
+                name: quiz.name,
+                image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
+                description: quiz.description,
+                pointValue: quiz.pointValue,
+            };
+        });
+
+        return response.json(serializedQuiz.pop());
 
     },
 

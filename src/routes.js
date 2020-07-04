@@ -12,6 +12,7 @@ routes.get("/questions", QuestionController.index);
 routes.get("/questions/:quiz_id", QuestionController.show);
 
 routes.get("/quizzes", QuizController.index);
+routes.get("/quizzes/:id", QuizController.show);
 routes.post("/quizzes", QuizController.create);
 routes.put("/quizzes/:id", QuizController.update);
 routes.delete("/quizzes/:id", QuizController.delete);
