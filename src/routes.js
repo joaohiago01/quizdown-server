@@ -9,7 +9,7 @@ const UserController = require('./controllers/UserController');
 routes.get("/users", UserController.index);
 
 routes.get("/questions", QuestionController.index);
-routes.get("/questions/:quizId", QuestionController.show);
+routes.get("/questions/:quiz_id", QuestionController.show);
 
 routes.get("/quizzes", QuizController.index);
 routes.post("/quizzes", QuizController.create);
