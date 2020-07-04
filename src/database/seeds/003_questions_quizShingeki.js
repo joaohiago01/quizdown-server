@@ -9,7 +9,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Maria, Rose e Sina.',
       alternativeFour: 'Marta, Rosa e Simbala.',
       rightAnswer: 2,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Qual titã que destruiu a muralha Maria no inicio do anime?',
@@ -18,7 +18,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Titã Femêa.',
       alternativeFour: 'Titã Colossal.',
       rightAnswer: 4,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'As muralhas foram criadas pelo rei Fritz 145º que usou o poder do titã primordial. Qual foi o real motivo do rei Fritz ter criado as muralhas usando titãs de 50 metros?',
@@ -27,7 +27,7 @@ exports.seed = function (knex) {
       alternativeThree: 'O real motivo foi para ganhar a guerra entre Marley e Eldia..',
       alternativeFour: 'O real motivo foi ele sabia que os Marleys iriam jogar titãs na ilha Paradis, onde ele está.',
       rightAnswer: 2,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'A mãe de que personagem virou titan?',
@@ -36,7 +36,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Reiner.',
       alternativeFour: 'Levi.',
       rightAnswer: 2,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Qual perssonagem é fissurado(a) em titans?',
@@ -45,7 +45,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Erwin Smith.',
       alternativeFour: 'Zoë Hange.',
       rightAnswer: 4,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Qual cidade de Rose foi invadida pelos titãs e recuperada depois?',
@@ -54,7 +54,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Karanes.',
       alternativeFour: 'Nenhuma cidade da muralha Rose foi invadida.',
       rightAnswer: 2,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Quem é o líder da Guarnição?',
@@ -63,7 +63,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Levi.',
       alternativeFour: 'Pixis.',
       rightAnswer: 4,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Durante o "Plano de Retomada", Eren se transforma em Titã para concluir a principal parte do plano. Mas algo inesperado acontece. O que houve?',
@@ -72,7 +72,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Eren ataca Mikasa.',
       alternativeFour: 'Eren devora um humano.',
       rightAnswer: 3,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Quem é conhecida como "Garota Batata"?',
@@ -81,7 +81,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Hange Zoë.',
       alternativeFour: 'Rico Brzenska.',
       rightAnswer: 1,
-      quizId: 2
+      quiz_id: 2
     },
     {
       question: 'Qual o ponto fraco dos Titãs?',
@@ -90,7 +90,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Nuca.',
       alternativeFour: 'Braços.',
       rightAnswer: 3,
-      quizId: 2
+      quiz_id: 2
     },
 
   ]);

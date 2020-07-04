@@ -9,7 +9,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Possuir o Mangekyou Sharingan Eterno, ser descendente da linhagem Uchiha e ter as células Senju.',
       alternativeFour: 'Ser descendente de Indra.',
       rightAnswer: 3,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Quais são os membros do Time Minato?',
@@ -18,7 +18,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Kushina Uzumaki, Hashirama Senju e Mito Uzumaki.',
       alternativeFour: 'Rin Nohara, Sasuke Uchiha e Itachi Uchiha.',
       rightAnswer: 1,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Quem ensinou o Rasengan para Minato?',
@@ -27,7 +27,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Kakashi.',
       alternativeFour: 'Nenhuma das alternativas.',
       rightAnswer: 4,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Qual o nome do sensei do Time 7?',
@@ -36,7 +36,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Kakashi.',
       alternativeFour: 'Kurenai.',
       rightAnswer: 3,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Naruto Uzumaki é o que de Jiraya?',
@@ -45,7 +45,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Neto.',
       alternativeFour: 'Afilhado.',
       rightAnswer: 4,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Qual o nome do pai de Sasuke e Itachi?',
@@ -54,7 +54,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Madara Uchiha.',
       alternativeFour: 'Itachi Uchiha.',
       rightAnswer: 1,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Quais os nomes dos ninjas do clã Senju que se tornaram Hokages?',
@@ -63,7 +63,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Tsunade, Hashirama e Tobirama.',
       alternativeFour: 'Sasuke, Juugo e Karin.',
       rightAnswer: 3,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Quais os dois clãs de Konoha que ultilizam doujutsus?',
@@ -72,7 +72,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Fuuma e Hyuuga.',
       alternativeFour: 'Uchiha e Aburame.',
       rightAnswer: 2,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'Qual companheiro de Kakashi foi morto em uma missão de guerra?',
@@ -81,7 +81,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Gai.',
       alternativeFour: 'Uchiha Obito.',
       rightAnswer: 4,
-      quizId: 1
+      quiz_id: 1
     },
     {
       question: 'De que aldeia é o(a) ninja que Orochimaru mata e se transforma para entrar na floresta proibida?',
@@ -90,7 +90,7 @@ exports.seed = function (knex) {
       alternativeThree: 'Areia.',
       alternativeFour: 'Chuva.',
       rightAnswer: 2,
-      quizId: 1
+      quiz_id: 1
     },
 
   ]);

@@ -7,7 +7,7 @@ exports.up = function (knex) {
         table.string('alternativeThree').notNullable();
         table.string('alternativeFour').notNullable();
         table.integer('rightAnswer').notNullable();
-        table.integer('quizId')
+        table.integer('quiz_id')
             .notNullable()
             .references('id')
             .inTable('quizzes');

@@ -4,25 +4,23 @@ module.exports = {
 
     async index(request, response) {
         const quizzes = await knex('quizzes');
-  //      return response.json(quizzes);
-
         const serializedQuizzes = quizzes.map(quiz => {
             return {
                 id: quiz.id,
                 name: quiz.name,
-                image_url: `http://localhost:3333/uploads/${quiz.image}`,
+                image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
                 description: quiz.description,
                 pointValue: quiz.pointValue,
             };
         });
 
-        return response.json(serializedQuizzes);  
+        return response.json(serializedQuizzes);
 
     },
 
     async create(request, response) {
 
-        const {name, description, pointValue} = request.body
+        const { name, description, pointValue } = request.body
 
         await knex('quizzes').insert({
             name,
@@ -35,23 +33,23 @@ module.exports = {
 
     async update(request, response) {
 
-        const {name, description, pointValue} = request.body
-        const {id} = request.params
+        const { name, description, pointValue } = request.body
+        const { id } = request.params
 
         await knex('quizzes').update({
             name,
             description,
             pointValue
-        }).where({id});
+        }).where({ id });
 
         return response.send()
     },
 
     async delete(request, response) {
 
-        const {id} = request.params
+        const { id } = request.params
 
-        await knex('quizzes').where({id}).del()
+        await knex('quizzes').where({ id }).del()
 
         return response.send()
     }
