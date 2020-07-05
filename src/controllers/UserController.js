@@ -42,7 +42,7 @@ module.exports = {
 
             await knex("users").where({id}).del()
 
-            response.send()
+            return response.send()
         }catch(error){
             next(error)
         }
