@@ -7,6 +7,9 @@ const QuizController = require('./controllers/QuizController');
 const UserController = require('./controllers/UserController');
 
 routes.get("/users", UserController.index);
+routes.post("/users",UserController.create);
+routes.put("/users",UserController.update);
+routes.delete("/users/:id",UserController.delete)
 
 routes.get("/questions", QuestionController.index);
 routes.get("/questions/:quiz_id", QuestionController.show);
