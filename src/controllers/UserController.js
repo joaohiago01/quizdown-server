@@ -1,13 +1,18 @@
 const knex = require('../database/connection');
-const { response } = require('express');
 
 module.exports = {
-    async index (request,response){
-        const results = await knex('users')
+    async index(request, response) {
+        const users = await knex('users')
 
-        return response.json(results)
+        return response.json(users)
     },
-    async create (request, require){
+    async show(request, response) {
+        const { id } = request.params
+        const user = await knex('users').where('id', id)
+
+        return response.json(user)
+    },
+    async create(request, response) {
         const { username, skips, points } = request.body
 
         await knex('users').insert({
@@ -16,39 +21,36 @@ module.exports = {
             points
         });
 
-        return response.status(201).send();
+        return response.status(201).send()
 
     },
-    async update(request, require, next){
-        try{
-            const {username, skips, points} = knex.body;
-            
+    async update(request, response, next) {
+        try {
+            const { username, skips, points } = request.body
+            const { id } = request.params
+
             await knex('users').update({
                 username,
                 skips,
                 points
-            })
+            }).where('id', id);
+
             return response.send()
 
-        }catch(error){
+        } catch (error) {
             next(error)
         }
-
-
     },
-    async delete(request,require,next){
-        try{
+    async delete(request, response, next) {
+        try {
             const { id } = request.params
 
-            await knex("users").where({id}).del()
+            await knex("users").where('id', id).del()
 
             return response.send()
-        }catch(error){
+
+        } catch (error) {
             next(error)
         }
-
     }
-    
 }
-
-

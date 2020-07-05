@@ -1,5 +1,4 @@
 const knex = require('../database/connection');
-const { show } = require('./QuestionController');
 
 module.exports = {
 
@@ -58,7 +57,7 @@ module.exports = {
             name,
             description,
             pointValue
-        }).where({ id });
+        }).where('id', id);
 
         return response.send()
     },
@@ -67,7 +66,7 @@ module.exports = {
 
         const { id } = request.params
 
-        await knex('quizzes').where({ id }).del()
+        await knex('quizzes').where('id', id).del()
 
         return response.send()
     }
