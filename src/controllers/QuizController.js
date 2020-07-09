@@ -8,7 +8,7 @@ module.exports = {
             return {
                 id: quiz.id,
                 name: quiz.name,
-                image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
+                image_url: `https://quizdown-server.herokuapp.com/uploads/${quiz.image}`,//image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
                 description: quiz.description,
                 pointValue: quiz.pointValue,
             };
@@ -25,7 +25,7 @@ module.exports = {
             return {
                 id: quiz.id,
                 name: quiz.name,
-                image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
+                image_url: `https://quizdown-server.herokuapp.com/uploads/${quiz.image}`,//image_url: `http://192.168.0.116:3333/uploads/${quiz.image}`,//`http://192.168.100.33:3333/uploads/${quiz.image}`
                 description: quiz.description,
                 pointValue: quiz.pointValue,
             };
