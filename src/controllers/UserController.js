@@ -8,7 +8,7 @@ module.exports = {
     },
     async show(request, response) {
         const { id } = request.params
-        const user = await knex('users').where('id', id)
+        const user = await knex('users').where('id', id).first()
 
         return response.json(user)
     },
@@ -26,14 +26,13 @@ module.exports = {
     },
     async update(request, response, next) {
         try {
-            const { username, skips, points } = request.body
-            const { id } = request.params
+            const { id, skips, points } = request.params
 
-            await knex('users').update({
-                username,
-                skips,
-                points
-            }).where('id', id);
+            await knex('users').where('id', id)
+                .update({
+                    skips,
+                    points
+                });
 
             return response.send()
 
